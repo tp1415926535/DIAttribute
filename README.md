@@ -1,6 +1,6 @@
 # DIAttribute
 
-[【English Description】]((https://github.com/tp1415926535/DIAttribute/master?##english-description))[【中文介绍】](https://github.com/tp1415926535/DIAttribute/master?#%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
+[【English Description】](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#english-description)[【中文介绍】](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
 
 ## English Description
 ### [DIRegister]
