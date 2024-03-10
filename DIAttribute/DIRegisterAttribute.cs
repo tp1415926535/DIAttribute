@@ -24,14 +24,10 @@ namespace DIAttribute
         public ServiceLifetime LifeTime { get; } = ServiceLifetime.Singleton;
 
 
-        public DIRegisterAttribute()
-        {
-        }
-
         /// <summary>
         /// if interface 
         /// </summary>
-        public DIRegisterAttribute(Type interfaceType)
+        public DIRegisterAttribute(Type interfaceType = null)
         {
             InterfaceType = interfaceType;
         }
