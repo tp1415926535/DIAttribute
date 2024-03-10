@@ -62,6 +62,12 @@ namespace DIAttribute
     }
     public static class IServiceProviderExtensions
     {
+        /// <summary>
+        /// if not in static method, .ForDIInject(this)
+        /// </summary>
+        /// <param name="serviceProvider"></param>
+        /// <param name="classInstance"></param>
+        /// <returns></returns>
         public static IServiceProvider ForDIInject(this IServiceProvider serviceProvider, object classInstance = null)
         {
             ServiceSetter.InjectServices(serviceProvider, classInstance);
