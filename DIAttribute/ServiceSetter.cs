@@ -21,7 +21,7 @@ namespace DIAttribute
         public ServiceSetter()
         {
             if (_serviceProvider == null)
-                throw new ArgumentException($"Please call '.ForDIInject()' after IServiceProvider!");
+                throw new ArgumentException($"Make sure that IServiceProvider calls '.ForDIInject()' ,and is not in the class that created the IServiceProvider!");
 
             //set property which DIInjectAttribute before init
             foreach (PropertyInfo propertyInfo in this.GetType().GetProperties())
