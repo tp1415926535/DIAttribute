@@ -36,7 +36,7 @@ namespace ConsoleApp.Framework.Demo
 
     #region without interface
     [DIRegister]
-    class TestService : ServiceSetter
+    class TestService : ServiceSetter //Inheriting this class automatically injects property values
     {
         [DIInject]
         IInterfaceServiceA otherService { get; set; }
@@ -58,6 +58,15 @@ namespace ConsoleApp.Framework.Demo
     [DIRegister(typeof(IInterfaceServiceA))]
     class InterfaceServiceA : IInterfaceServiceA
     {
+        [DIInject]
+        IInterfaceServiceB otherService { get; set; }
+
+        public InterfaceServiceA()
+        {
+            ServiceSetter.InjectServices(this);//Injections of manually invoked properties
+            Console.WriteLine(otherService == null);
+        }
+
         public void Show()
         {
             Console.WriteLine("InterfaceA Success");

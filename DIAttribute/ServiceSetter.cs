@@ -37,6 +37,17 @@ namespace DIAttribute
             SetService(classInstance);
         }
 
+
+        /// <summary>
+        /// Called manually if you need to not inherit this class
+        /// </summary>
+        /// <param name="classInstance"></param>
+        public static void InjectServices(object classInstance)
+        {
+            if (classInstance == null) return;
+            SetService(classInstance);
+        }
+
         /// <summary>
         ///set property which DIInjectAttribute before init
         /// </summary>
