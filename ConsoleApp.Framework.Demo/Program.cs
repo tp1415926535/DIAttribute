@@ -14,9 +14,7 @@ namespace ConsoleApp.Framework.Demo
         {
             var services = new ServiceCollection();
             services.RegisterCurrentAssembly();
-            var provider = services.BuildServiceProvider();
-
-
+            var provider = services.BuildServiceProvider().ForDIInject();
 
             provider.GetService<IInterfaceServiceA>().Show();
 
@@ -32,7 +30,7 @@ namespace ConsoleApp.Framework.Demo
         [DIInject]
         public IInterfaceServiceA otherService { get; set; }
 
-        public TestService(IServiceProvider provider) : base(provider) 
+        public TestService()
         {
             Console.WriteLine(otherService == null);
         }

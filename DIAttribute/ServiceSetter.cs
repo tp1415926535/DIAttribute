@@ -9,19 +9,18 @@ using System.Threading.Tasks;
 namespace DIAttribute
 {
     /// <summary>
-    /// set service property before init
+    /// Should be explicitly inherited
     /// </summary>
     public class ServiceSetter
     {
-        IServiceProvider _serviceProvider { get; set; }
-        public ServiceSetter(IServiceProvider serviceProvider)
-        {
-            _serviceProvider = serviceProvider;
-            Set();
-        }
+        public static IServiceProvider _serviceProvider { get; set; }
 
-        public void Set()
+        public ServiceSetter()
         {
+            if (_serviceProvider == null)
+                throw new ArgumentException($"Please call '.ForDIInject()' after IServiceProvider!");
+
+            //set property which DIInjectAttribute before init
             foreach (PropertyInfo propertyInfo in this.GetType().GetProperties())
             {
                 object[] attributes = propertyInfo.GetCustomAttributes(typeof(DIInjectAttribute), false);

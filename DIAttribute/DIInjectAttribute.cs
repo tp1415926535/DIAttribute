@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DIAttribute
 {
     /// <summary>
-    ///  should DI in init
+    ///  set value from DI before init
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class DIInjectAttribute: Attribute

@@ -60,5 +60,12 @@ namespace DIAttribute
             return services;
         }
     }
-
+    public static class IServiceProviderExtensions
+    {
+        public static IServiceProvider ForDIInject(this IServiceProvider serviceProvider)
+        {
+            ServiceSetter._serviceProvider = serviceProvider;
+            return serviceProvider;
+        }
+    }
 }
