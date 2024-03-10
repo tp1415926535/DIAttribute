@@ -62,9 +62,9 @@ namespace DIAttribute
     }
     public static class IServiceProviderExtensions
     {
-        public static IServiceProvider ForDIInject(this IServiceProvider serviceProvider)
+        public static IServiceProvider ForDIInject(this IServiceProvider serviceProvider, object classInstance = null)
         {
-            ServiceSetter._serviceProvider = serviceProvider;
+            ServiceSetter.InjectServices(serviceProvider, classInstance);
             return serviceProvider;
         }
     }

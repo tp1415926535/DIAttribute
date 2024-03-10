@@ -10,6 +10,9 @@ namespace ConsoleApp.Framework.Demo
 {
     class Program
     {
+        [DIInject]
+        public TestService testService { get; set; }
+
         static void Main(string[] args)
         {
             var services = new ServiceCollection();
@@ -17,11 +20,11 @@ namespace ConsoleApp.Framework.Demo
             var provider = services.BuildServiceProvider().ForDIInject();
 
             provider.GetService<IInterfaceServiceA>().Show();
-
             Console.WriteLine(provider.GetService<TestService>().otherService == null);
             Console.Read();
         }
     }
+
 
     #region without interface
     [DIRegister]
