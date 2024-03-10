@@ -10,25 +10,33 @@ namespace ConsoleApp.Framework.Demo
 {
     class Program
     {
-        [DIInject]
-        public TestService testService { get; set; }
-
         static void Main(string[] args)
         {
-            var services = new ServiceCollection();
-            services.RegisterCurrentAssembly();
-            var provider = services.BuildServiceProvider().ForDIInject();
-
-            provider.GetService<IInterfaceServiceA>().Show();
-            Console.WriteLine(provider.GetService<TestService>().otherService == null);
-            Console.Read();
+            ServiceManager serviceManager = new ServiceManager();
+            serviceManager.CreateService();
         }
     }
 
 
+    public class ServiceManager
+    {
+        [DIInject]
+        public TestService service { get; set; }
+
+        public void CreateService()
+        {
+            var services = new ServiceCollection();
+            services.RegisterCurrentAssembly();
+            var provider = services.BuildServiceProvider().ForDIInject(this);
+
+            service.Show();
+            Console.Read();
+        }
+    }
+
     #region without interface
     [DIRegister]
-    class TestService: ServiceSetter
+    public class TestService : ServiceSetter
     {
         [DIInject]
         public IInterfaceServiceA otherService { get; set; }
@@ -37,8 +45,7 @@ namespace ConsoleApp.Framework.Demo
         {
             Console.WriteLine(otherService == null);
         }
-            
-                                                                                
+
         public void Show()
         {
             Console.WriteLine("hello");
@@ -57,7 +64,7 @@ namespace ConsoleApp.Framework.Demo
         }
     }
 
-    interface IInterfaceServiceA
+    public interface IInterfaceServiceA
     {
         void Show();
     }
