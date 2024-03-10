@@ -18,10 +18,10 @@ namespace ConsoleApp.Framework.Demo
     }
 
 
-    public class ServiceManager
+    class ServiceManager
     {
         [DIInject]
-        public TestService service { get; set; }
+        TestService service { get; set; }
 
         public void CreateService()
         {
@@ -36,10 +36,10 @@ namespace ConsoleApp.Framework.Demo
 
     #region without interface
     [DIRegister]
-    public class TestService : ServiceSetter
+    class TestService : ServiceSetter
     {
         [DIInject]
-        public IInterfaceServiceA otherService { get; set; }
+        IInterfaceServiceA otherService { get; set; }
 
         public TestService()
         {
@@ -64,7 +64,7 @@ namespace ConsoleApp.Framework.Demo
         }
     }
 
-    public interface IInterfaceServiceA
+    interface IInterfaceServiceA
     {
         void Show();
     }

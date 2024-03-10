@@ -44,7 +44,7 @@ namespace DIAttribute
         private static void SetService(object classInstance)
         {
             //set property which DIInjectAttribute before init
-            foreach (PropertyInfo propertyInfo in classInstance.GetType().GetProperties())
+            foreach (PropertyInfo propertyInfo in classInstance.GetType().GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance))
             {
                 object[] attributes = propertyInfo.GetCustomAttributes(typeof(DIInjectAttribute), false);
                 foreach (DIInjectAttribute attribute in attributes)
