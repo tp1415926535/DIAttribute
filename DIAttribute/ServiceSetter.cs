@@ -15,6 +15,9 @@ namespace DIAttribute
     {
         public static IServiceProvider _serviceProvider { get; set; }
 
+        /// <summary>
+        /// Inherited class initialization should automatically go this method
+        /// </summary>
         public ServiceSetter()
         {
             if (_serviceProvider == null)
