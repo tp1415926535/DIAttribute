@@ -66,7 +66,7 @@ namespace ConsoleApp.Framework.Demo
     {
         public void Show()
         {
-            Console.WriteLine("Interface Success");
+            Console.WriteLine("InterfaceB Success");
         }
     }
 
