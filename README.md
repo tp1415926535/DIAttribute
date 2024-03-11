@@ -11,9 +11,8 @@
 
 ## English Description
 ### [DIRegister]
-* Raw way
-
-registering for a service list:
+#### native writing style
+* registering for a service list:
 ```C#
 var services = new ServiceCollection();
 services.AddSingleton<TestService1>();
@@ -21,7 +20,7 @@ services.AddSingleton<ITestService2>();
 //...
 var provider = services.BuildServiceProvider();
 ```
-services:
+* services:
 ```C#
 class TestService1
 {
@@ -33,15 +32,14 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-* Current
-
-registering for a service list:
+#### current writing
+* registering for a service list:
 ```C#
 var services = new ServiceCollection();
 services.RegisterCurrentAssembly(); // just add this, or services.RegisterAssembly(assmbly);
 var provider = services.BuildServiceProvider();
 ```
-services:
+* services:
 ```C#
 [DIRegister] //add attribute if need register
 class TestService1
@@ -56,7 +54,7 @@ class TestService2
 interface ITestService2 {}
 ```
 ### [DIInject]
-* Raw way
+#### native writing style
 ```C#
 class TestService1
 {
@@ -71,15 +69,14 @@ class TestService1
     }
 }
 ```
-* Current
-
-registering for a service list:
+#### current writing
+* registering for a service list:
 ```C#
 var services = new ServiceCollection();
 //...
 var provider = services.BuildServiceProvider().ForDIInject(this); //add method
 ```
-class property:
+* class property:
 ```C#
 class TestService1 : ServiceSetter // Inheriting this class automatically injects property values
 {
@@ -110,9 +107,8 @@ class TestService1
 -------------
 ## 中文介绍
 ### [DIRegister]
-* 原生写法
-
-初始化注册服务到集合：
+#### 原生写法
+* 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
 services.AddSingleton<TestService1>();
@@ -120,7 +116,7 @@ services.AddSingleton<ITestService2>();
 //...
 var provider = services.BuildServiceProvider();
 ```
-service服务示例：
+* service服务示例：
 ```C#
 class TestService1
 {
@@ -132,15 +128,14 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-* 现在写法
-
-初始化注册服务到集合：
+#### 现在写法
+* 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
 services.RegisterCurrentAssembly(); // 只要添加这行, 或者指定 services.RegisterAssembly(assmbly);
 var provider = services.BuildServiceProvider();
 ```
-service服务示例：
+* service服务示例：
 ```C#
 [DIRegister] // 如果要注册的服务就添加特性
 class TestService1
@@ -155,7 +150,7 @@ class TestService2
 interface ITestService2 {}
 ```
 ### [DIInject]
-* 原生写法
+#### 原生写法
 ```C#
 class TestService1
 {
@@ -170,15 +165,14 @@ class TestService1
     }
 }
 ```
-* 现在写法
-
-初始化注册服务到集合：
+#### 现在写法
+* 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
 //...
 var provider = services.BuildServiceProvider().ForDIInject(this); //补充调用方法用于后续注入获取
 ```
-类写法:
+* 类写法:
 ```C#
 class TestService1 : ServiceSetter //继承这个类会自动给有特性的属性赋值
 {
