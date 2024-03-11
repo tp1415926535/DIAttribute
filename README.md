@@ -76,7 +76,8 @@ var services = new ServiceCollection();
 //...
 var provider = services.BuildServiceProvider().ForDIInject(this); //add method
 ```
-* class property:
+* class property: 
+*You can get the service value even if the current class is not involved in the injection*
 ```C#
 class TestService1 : ServiceSetter // Inheriting this class automatically injects property values
 {
@@ -172,7 +173,8 @@ var services = new ServiceCollection();
 //...
 var provider = services.BuildServiceProvider().ForDIInject(this); //补充调用方法用于后续注入获取
 ```
-* 类写法:
+* 类写法: 
+*即使当前类不参与注入也可以获取到服务值*
 ```C#
 class TestService1 : ServiceSetter //继承这个类会自动给有特性的属性赋值
 {
