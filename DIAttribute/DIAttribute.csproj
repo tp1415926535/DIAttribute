@@ -7,9 +7,16 @@
     <Description>Replace service registration and acquisition with attributes to simplify code writing.
 用特性替代服务注册和获取，简化代码写法。</Description>
     <PackageProjectUrl>https://github.com/tp1415926535/DIAttribute</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
