@@ -1,6 +1,8 @@
 # DIAttribute
-* [DIRegister]
-* [DIInject]
+Replace service registration and acquisition with attributes to simplify code writing.  
+用特性替代服务注册和获取，简化代码写法。
+* **[DIRegister]**: Used to initialise the registration service. 用于初始化注册服务。
+* **[DIInject]**: Used in place of the injection write method to obtain services directly. 用于代替注入写法直接获取服务。
 
 [![release](https://img.shields.io/github/v/release/tp1415926535/DIAttribute?color=green&logo=github)](https://github.com/tp1415926535/DIAttribute/releases) 
 [![nuget](https://img.shields.io/nuget/v/DIAttribute?color=lightblue&logo=nuget)](https://www.nuget.org/packages/DiAttribute)     
@@ -10,13 +12,13 @@
 [![中文介绍](https://img.shields.io/static/v1?label=%E4%B8%AD%E6%96%87&message=%E8%AF%B4%E6%98%8E&color=red)](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
 
 ## English Description
-### [DIRegister]
-#### native writing style
+### 1. [DIRegister]
+#### *native writing style*
 * registering for a service list:
 ```C#
 var services = new ServiceCollection();
 services.AddSingleton<TestService1>();
-services.AddSingleton<ITestService2>();
+services.AddSingleton<ITestService2,TestService2>();
 //...
 var provider = services.BuildServiceProvider();
 ```
@@ -32,7 +34,7 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-#### current writing
+#### *current writing*
 * registering for a service list:
 ```C#
 var services = new ServiceCollection();
@@ -53,8 +55,8 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-### [DIInject]
-#### native writing style
+### 2.[DIInject]
+#### *native writing style*
 ```C#
 class TestService1
 {
@@ -69,7 +71,7 @@ class TestService1
     }
 }
 ```
-#### current writing
+#### *current writing*
 * registering for a service list:
 ```C#
 var services = new ServiceCollection();
@@ -107,8 +109,8 @@ class TestService1
 
 -------------
 ## 中文介绍
-### [DIRegister]
-#### 原生写法
+### 1.[DIRegister]
+#### *原生写法*
 * 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
@@ -129,7 +131,7 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-#### 现在写法
+#### *现在写法*
 * 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
@@ -150,8 +152,8 @@ class TestService2
 }
 interface ITestService2 {}
 ```
-### [DIInject]
-#### 原生写法
+### 2.[DIInject]
+#### *原生写法*
 ```C#
 class TestService1
 {
@@ -166,7 +168,7 @@ class TestService1
     }
 }
 ```
-#### 现在写法
+#### *现在写法*
 * 初始化注册服务到集合：
 ```C#
 var services = new ServiceCollection();
