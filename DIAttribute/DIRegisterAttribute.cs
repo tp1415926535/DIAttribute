@@ -27,9 +27,10 @@ namespace DIAttribute
         /// <summary>
         /// if interface 
         /// </summary>
-        public DIRegisterAttribute(Type interfaceType = null)
+        public DIRegisterAttribute(Type interfaceType = null, ServiceLifetime lifeTime = ServiceLifetime.Singleton)
         {
             InterfaceType = interfaceType;
+            LifeTime = lifeTime;
         }
     }
 }
