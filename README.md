@@ -1,8 +1,13 @@
 # DIAttribute
-[DIRegister] , [DIInject]
+* [DIRegister]
+* [DIInject]
 
-[【English Description】](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#english-description)   
-[【中文介绍】](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
+[![release](https://img.shields.io/github/v/release/tp1415926535/DIAttribute?color=green&logo=github)](https://github.com/tp1415926535/DIAttribute/releases) 
+[![nuget](https://img.shields.io/nuget/v/DIAttribute?color=lightblue&logo=nuget)](https://www.nuget.org/packages/DiAttribute)     
+![language](https://img.shields.io/github/languages/top/tp1415926535/DIAttribute)
+     
+[![English Description](https://img.shields.io/static/v1?label=English&message=Description&color=yellow)](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#english-description) 
+[![中文介绍](https://img.shields.io/static/v1?label=%E4%B8%AD%E6%96%87&message=%E8%AF%B4%E6%98%8E&color=red)](https://github.com/tp1415926535/DIAttribute?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
 
 ## English Description
 ### [DIRegister]
