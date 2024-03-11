@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIAttribute", "DIAttribute\DIAttribute.csproj", "{C4FFEFBA-C5CD-4C7C-9204-F2C17AC6BC0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIAttribute", "DIAttribute\DIAttribute.csproj", "{C4FFEFBA-C5CD-4C7C-9204-F2C17AC6BC0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.Framework.Demo", "ConsoleApp.Framework.Demo\ConsoleApp.Framework.Demo.csproj", "{C7524037-22EC-4E3C-9A9E-F9A05FA28DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.Core.Demo", "WpfApp.Core.Demo\WpfApp.Core.Demo.csproj", "{FAC81829-F9F0-4AA0-BC05-9499F1E05CA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C7524037-22EC-4E3C-9A9E-F9A05FA28DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7524037-22EC-4E3C-9A9E-F9A05FA28DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7524037-22EC-4E3C-9A9E-F9A05FA28DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC81829-F9F0-4AA0-BC05-9499F1E05CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC81829-F9F0-4AA0-BC05-9499F1E05CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC81829-F9F0-4AA0-BC05-9499F1E05CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC81829-F9F0-4AA0-BC05-9499F1E05CA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
