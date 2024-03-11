@@ -1,8 +1,10 @@
 # DIAttribute
 Replace service registration and acquisition with attributes to simplify code writing.  
 用特性替代服务注册和获取，简化代码写法。
-* **[DIRegister]**: Used to initialise the registration service. 用于初始化注册服务。
-* **[DIInject]**: Used in place of the injection write method to obtain services directly. 用于代替注入写法直接获取服务。
+* **[DIRegister]**    
+     Used to initialise the registration service. 用于初始化注册服务。
+* **[DIInject]**    
+     Used in place of the injection write method to obtain services directly. 用于代替注入写法直接获取服务。
 
 [![release](https://img.shields.io/github/v/release/tp1415926535/DIAttribute?color=green&logo=github)](https://github.com/tp1415926535/DIAttribute/releases) 
 [![nuget](https://img.shields.io/nuget/v/DIAttribute?color=lightblue&logo=nuget)](https://www.nuget.org/packages/DiAttribute)     
